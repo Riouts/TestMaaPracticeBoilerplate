@@ -9,9 +9,15 @@
     ],
     "resource": [
         {
-            "name": "世界之树副本刷友情币",
+            "name": "世界之树副本刷友情币(房主)",
             "path": [
                 "{PROJECT_DIR}/resource"
+            ]
+        },
+        {
+            "name": "世界之树副本刷友情币(房员)",
+            "path": [
+                "{PROJECT_DIR}/resource1"
             ]
         }
     ],
