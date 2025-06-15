@@ -97,11 +97,11 @@ jobs:
           python ./install.py ${{ needs.meta.outputs.tag }}
 
       - name: Download MFA
-        if: ${{ matrix.os != 'android' }}
+        if: ${{ matrix.os == 'win' }}
         uses: robinraju/release-downloader@v1
         with:
           repository: SweetSmellFox/MFAAvalonia
-          fileName: "MFAAvalonia-*-${{ matrix.os }}-${{ matrix.arch }}*"
+          fileName: "MFAAvalonia-*-${{ matrix.os }}-${{ x64 }}*"
           latest: true
           out-file-path: "MFAAvalonia"
           extract: true
