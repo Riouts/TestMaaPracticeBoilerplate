@@ -8,12 +8,31 @@
             "执行匹配"
         ]
     },
-    "退出副本": {
+    "世界之树副本刷友情币(房员)": {
+        "recognition": "TemplateMatch",
+        "template": "开启世界之树副本.png",
+        "action": "DoNothing",
+        "next": [
+            "接受匹配"
+        ],
+        "interrupt": [
+            "世界之树副本刷友情币(房员)"
+        ]
+    },
+    "退出副本(房主)": {
         "recognition": "TemplateMatch",
         "template": "领奖界面返回.png",
         "action": "Click",
         "next": [
             "世界之树副本刷友情币(房主)"
+        ]
+    },
+    "退出副本(房员)": {
+        "recognition": "TemplateMatch",
+        "template": "领奖界面返回.png",
+        "action": "Click",
+        "next": [
+            "世界之树副本刷友情币(房员)"
         ]
     },
     "确认组队人数": {
@@ -160,7 +179,8 @@
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
-            "退出副本"
+            "退出副本(房主)",
+            "退出副本(房员)"
         ]
     }
 }

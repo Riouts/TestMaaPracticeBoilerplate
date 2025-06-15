@@ -9,26 +9,30 @@
     ],
     "resource": [
         {
-            "name": "世界之树副本刷友情币(房主)",
+            "name": "世界之树副本刷友情币",
             "path": [
                 "{PROJECT_DIR}/resource"
-            ]
-        },
-        {
-            "name": "世界之树副本刷友情币(房员)",
-            "path": [
-                "{PROJECT_DIR}/resource1"
             ]
         }
     ],
     "task": [
         {
             "name": "世界之树副本刷友情币(房主)",
-            "entry": "世界之树副本刷友情币(房主)"
+            "entry": "世界之树副本刷友情币(房主)",
+            "pipeline_override": {
+                "退出副本(房员)": {
+                    "enabled": false
+                }
+            }
         },
         {
             "name": "世界之树副本刷友情币(房员)",
-            "entry": "世界之树副本刷友情币(房员)"
+            "entry": "世界之树副本刷友情币(房员)",
+            "pipeline_override": {
+                "退出副本(房主)": {
+                    "enabled": false
+                }
+            }
         }
     ]
 }
