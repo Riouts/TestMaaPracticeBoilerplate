@@ -44,8 +44,11 @@
     },
     "启动副本": {
         "recognition": "TemplateMatch",
-        "template": "",
-        "action": "Click"
+        "template": "进入副本.png",
+        "action": "Click",
+        "next": [
+            "关卡准备界面"
+        ]
     },
     "执行匹配": {
         "recognition": "OCR",
@@ -53,9 +56,6 @@
         "action": "Click",
         "next": [
             "接受匹配"
-        ],
-        "interrupt": [
-            "是否在匹配"
         ]
     },
     "接受匹配": {
