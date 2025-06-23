@@ -1,5 +1,42 @@
 {
     "世界之树副本刷友情币(房主)": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "next": [
+            "开启世界之树副本",
+            "确认组队人数",
+            "执行匹配",
+            "关卡准备界面",
+            "是否在战斗",
+            "选择关卡",
+            "是否已结束副本",
+            "是否无奖励领取次数"
+        ]
+    },
+    "世界之树副本刷友情币(房员)": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "next": [
+            "接受匹配",
+            "关卡准备界面",
+            "是否在战斗",
+            "选择关卡",
+            "是否已结束副本",
+            "是否无奖励领取次数"
+        ],
+        "interrupt": [
+            "等待进入世界之树副本"
+        ]
+    },
+    "等待进入世界之树副本": {
+        "recognition": "TemplateMatch",
+        "template": "开启世界之树副本.png",
+        "action": "DoNothing",
+        "next": [
+            "世界之树副本刷友情币(房员)"
+        ]
+    },
+    "开启世界之树副本": {
         "recognition": "TemplateMatch",
         "template": "开启世界之树副本.png",
         "action": "Click",
@@ -8,31 +45,29 @@
             "执行匹配"
         ]
     },
-    "世界之树副本刷友情币(房员)": {
-        "recognition": "TemplateMatch",
-        "template": "开启世界之树副本.png",
-        "action": "DoNothing",
-        "next": [
-            "接受匹配"
-        ],
-        "interrupt": [
-            "世界之树副本刷友情币(房员)"
-        ]
-    },
-    "退出副本(房主)": {
+    "退出副本": {
         "recognition": "TemplateMatch",
         "template": "领奖界面返回.png",
         "action": "Click",
         "next": [
+            "世界之树副本刷友情币(房主)",
+            "世界之树副本刷友情币(房员)"
+        ]
+    },
+    "是否无奖励领取次数": {
+        "recognition": "OCR",
+        "expected": "尚未领取日常副本奖励",
+        "next": [
+            "确认不领取日常副本奖励"
+        ]
+    },
+    "确认不领取日常副本奖励": {
+        "recognition": "TemplateMatch",
+        "template": "确定取消领取奖励.png",
+        "action": "Click",
+        "next": [
+            "世界之树副本刷友情币(房员)",
             "世界之树副本刷友情币(房主)"
-        ]
-    },
-    "退出副本(房员)": {
-        "recognition": "TemplateMatch",
-        "template": "领奖界面返回.png",
-        "action": "Click",
-        "next": [
-            "世界之树副本刷友情币(房员)"
         ]
     },
     "确认组队人数": {
@@ -67,7 +102,8 @@
             "已重新匹配"
         ],
         "interrupt": [
-            "是否在匹配"
+            "是否在匹配",
+            "等待进入世界之树副本"
         ]
     },
     "已重新匹配": {
@@ -85,9 +121,10 @@
     "关卡准备界面": {
         "recognition": "OCR",
         "expected": "战斗准备倒计时",
-        "action": "Click",
+        "action": "DoNothing",
         "pre_delay": 100,
         "post_delay": 100,
+        "timeout": 60000,
         "next": [
             "关卡准备"
         ]
@@ -129,6 +166,7 @@
         "action": "DoNothing",
         "pre_delay": 100,
         "post_delay": 100,
+        "timeout": 60000,
         "next": [
             "非强制修整关",
             "怪物关1",
@@ -179,8 +217,7 @@
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
-            "退出副本(房主)",
-            "退出副本(房员)"
+            "退出副本"
         ]
     }
 }

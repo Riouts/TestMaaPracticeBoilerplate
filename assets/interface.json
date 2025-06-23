@@ -1,5 +1,5 @@
 {
-    "version": "0.0.3",
+    "version": "0.0.6",
     "message": "emmmmm",
     "controller": [
         {
@@ -20,7 +20,7 @@
             "name": "世界之树副本刷友情币(房主)",
             "entry": "世界之树副本刷友情币(房主)",
             "pipeline_override": {
-                "退出副本(房员)": {
+                "世界之树副本刷友情币(房员)": {
                     "enabled": false
                 }
             }
@@ -29,7 +29,7 @@
             "name": "世界之树副本刷友情币(房员)",
             "entry": "世界之树副本刷友情币(房员)",
             "pipeline_override": {
-                "退出副本(房主)": {
+                "世界之树副本刷友情币(房主)": {
                     "enabled": false
                 }
             }
