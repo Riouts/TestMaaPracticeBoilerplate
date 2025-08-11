@@ -82,7 +82,8 @@
         "template": "进入副本.png",
         "action": "Click",
         "next": [
-            "关卡准备界面"
+            "关卡准备界面",
+            "选择关卡"
         ]
     },
     "执行匹配": {
@@ -114,7 +115,8 @@
         "action": "Click",
         "next": [
             "关卡准备界面",
-            "接受匹配"
+            "接受匹配",
+            "选择关卡"
         ],
         "interrupt": [
             "是否在匹配"
@@ -123,7 +125,10 @@
     "关卡准备界面": {
         "recognition": "OCR",
         "expected": "战斗准备倒计时",
-        "action": "DoNothing"
+        "action": "DoNothing",
+        "next": [
+            "选择关卡"
+        ]
     },
     "是否在匹配": {
         "recognition": "OCR",
