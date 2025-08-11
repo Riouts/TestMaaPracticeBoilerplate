@@ -98,12 +98,13 @@
         "template": "接受匹配按钮.png",
         "action": "Click",
         "next": [
-            "关卡准备界面",
+            "是否在战斗",
             "已重新匹配"
         ],
         "interrupt": [
             "是否在匹配",
-            "等待进入世界之树副本"
+            "等待进入世界之树副本",
+            "关卡准备界面"
         ]
     },
     "已重新匹配": {
@@ -121,24 +122,7 @@
     "关卡准备界面": {
         "recognition": "OCR",
         "expected": "战斗准备倒计时",
-        "action": "DoNothing",
-        "pre_delay": 100,
-        "post_delay": 100,
-        "timeout": 60000,
-        "next": [
-            "关卡准备"
-        ]
-    },
-    "关卡准备": {
-        "recognition": "TemplateMatch",
-        "template": "准备按钮.png",
-        "action": "Click",
-        "pre_delay": 100,
-        "post_delay": 100,
-        "next": [
-            "选择关卡",
-            "是否在战斗"
-        ]
+        "action": "DoNothing"
     },
     "是否在匹配": {
         "recognition": "OCR",
@@ -153,10 +137,10 @@
         "post_delay": 100,
         "next": [
             "选择关卡",
-            "是否已结束副本",
-            "关卡准备界面"
+            "是否已结束副本"
         ],
         "interrupt": [
+            "关卡准备界面",
             "是否在战斗"
         ]
     },
