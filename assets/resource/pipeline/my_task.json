@@ -99,7 +99,8 @@
         "action": "Click",
         "next": [
             "是否在战斗",
-            "已重新匹配"
+            "已重新匹配",
+            "选择关卡"
         ],
         "interrupt": [
             "是否在匹配",
@@ -146,7 +147,7 @@
     },
     "选择关卡": {
         "recognition": "OCR",
-        "expected": "可点击投票选择想要前进的房间",
+        "expected": "副本房间地图",
         "action": "DoNothing",
         "pre_delay": 100,
         "post_delay": 100,
